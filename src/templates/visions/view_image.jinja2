@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <div class="page-header">
+        <h1>Vision & Geolocation Info
+            <small>Most recent one before time threshold</small>
+        </h1>
+    </div>
+    <div class="list-group">
+        <a class="list-group-item">
+            <p><img  src={{ image }}></p>
+        </a>
+        <a class="list-group-item">
+            <h5 class="GeoInfo">(Latitude, Longitude): ({{ location.coord['location']['lat'] }}, {{ location.coord['location']['lng'] }})
+                with Accuracy={{ location.coord['accuracy'] }}</h5>
+        </a>
+    </div>
+{% endblock %}
+

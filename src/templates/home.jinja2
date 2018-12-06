@@ -1,0 +1,17 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Online Tracker</h1>
+        <p>We offer Vision and Geolocation info about our user.</p>
+        <p>Easily check your family members' travel info!</p>
+        <form method="post">
+            <div class="form-group">
+                <label for="timeThreshold"></label>
+                <input type="text" class="form-control" id="timeThreshold" name="timeThreshold" placeholder="12/05/18 14:00:00"
+                aria-describedby="timeThresholdHelp">
+                <span id="timeThresholdHelp" class="help-block">Set the time threshold to search the most recent info before that time</span>
+            </div>
+            <p><a class="btn btn-primary btn-lg" href="{{ url_for('visions.view') }}" role="button">View</a></p>
+        </form>
+    </div>
+{% endblock %}
